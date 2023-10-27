@@ -127,7 +127,7 @@ export const ListPosts = ({
       </Box>
 
       <HStack pt={"32px"} justify={"center"}>
-        <StyledPaginate
+        <ReactPaginate
           previousLabel="<"
           nextLabel=">"
           pageCount={len / 3}
