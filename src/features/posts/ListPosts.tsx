@@ -88,6 +88,7 @@ export const ListPosts = ({
   }, [page]);
 
   const len = Math.ceil(Number(totalPosts) / 10) || 1;
+  console.log(Number(totalPosts));
 
   return (
     <LayoutBottom sticky="120px">
@@ -123,17 +124,18 @@ export const ListPosts = ({
         )}
 
         {isLoading && <Loading />}
-        <HStack pt={"32px"} justify={"center"}>
-          <StyledPaginate
-            previousLabel="<"
-            nextLabel=">"
-            pageCount={20}
-            onPageChange={handleRouter}
-            pageRangeDisplayed={1}
-            marginPagesDisplayed={1}
-          />
-        </HStack>
       </Box>
+
+      <HStack pt={"32px"} justify={"center"}>
+        <StyledPaginate
+          previousLabel="<"
+          nextLabel=">"
+          pageCount={len / 3}
+          onPageChange={handleRouter}
+          pageRangeDisplayed={1}
+          marginPagesDisplayed={1}
+        />
+      </HStack>
     </LayoutBottom>
   );
 };
