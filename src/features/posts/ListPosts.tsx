@@ -89,7 +89,6 @@ export const ListPosts = ({
 
   const len = Math.ceil(Number(totalPosts) / 10) || 1;
 
-
   return (
     <LayoutBottom sticky="120px">
       <Box>
@@ -128,8 +127,8 @@ export const ListPosts = ({
 
       <HStack pt={"32px"} justify={"center"}>
         <StyledPaginate
-          previousLabel="+"
-          nextLabel="-"
+          previousLabel=">"
+          nextLabel="<"
           pageCount={len / 3}
           onPageChange={handleRouter}
           pageRangeDisplayed={1}
