@@ -89,8 +89,8 @@ export default async function handler(
   let posts: any[] = [];
   let totalPosts: string = "0";
   try {
-    const idNew = 62;
-    const idNotifi = 68;
+    const idNew = 84;
+    const idNotifi = 82;
     const id = type === "news" ? idNew : type === "notifis" ? idNotifi : null;
     const endPoint = id
       ? `${api_url}/posts?_embed&per_page=8&status=publish&page=${page}&categories=${id}`
