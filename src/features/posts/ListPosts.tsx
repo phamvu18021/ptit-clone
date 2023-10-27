@@ -88,7 +88,7 @@ export const ListPosts = ({
   }, [page]);
 
   const len = Math.ceil(Number(totalPosts) / 10) || 1;
-  console.log(Number(totalPosts));
+
 
   return (
     <LayoutBottom sticky="120px">
@@ -127,9 +127,9 @@ export const ListPosts = ({
       </Box>
 
       <HStack pt={"32px"} justify={"center"}>
-        <ReactPaginate
-          previousLabel="<"
-          nextLabel=">"
+        <StyledPaginate
+          previousLabel="+"
+          nextLabel="-"
           pageCount={len / 3}
           onPageChange={handleRouter}
           pageRangeDisplayed={1}
