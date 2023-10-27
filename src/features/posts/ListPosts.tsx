@@ -123,18 +123,17 @@ export const ListPosts = ({
         )}
 
         {isLoading && <Loading />}
+        <HStack pt={"32px"} justify={"center"}>
+          <StyledPaginate
+            previousLabel="<"
+            nextLabel=">"
+            pageCount={20}
+            onPageChange={handleRouter}
+            pageRangeDisplayed={1}
+            marginPagesDisplayed={1}
+          />
+        </HStack>
       </Box>
-
-      <HStack pt={"32px"} justify={"center"}>
-        <StyledPaginate
-          previousLabel="<"
-          nextLabel=">"
-          pageCount={20}
-          onPageChange={handleRouter}
-          pageRangeDisplayed={1}
-          marginPagesDisplayed={1}
-        />
-      </HStack>
     </LayoutBottom>
   );
 };
